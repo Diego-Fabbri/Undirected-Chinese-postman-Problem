@@ -1,0 +1,54 @@
+Found incumbent of value 42.000000 after 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 10 rows, 12 columns, and 36 nonzeros.
+Reduced MIP has 12 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.02 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 10 rows, 12 columns, and 36 nonzeros.
+Reduced MIP has 12 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.02 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 6.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.00 sec. (0.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                           42.0000        0.0000        9  100.00%
+*     0+    0                           27.0000        0.0000        9  100.00%
+      0     0       21.0000     4       27.0000       21.0000        9   22.22%
+*     0+    0                           25.0000       21.0000        9   16.00%
+      0     0       23.0000     2       25.0000       Cuts: 7       13    8.00%
+      0     0       23.0000    10       25.0000       Cuts: 3       15    8.00%
+      0     0       23.0000     8       25.0000   ZeroHalf: 2       18    8.00%
+      0     0        cutoff             25.0000       25.0000       18    0.00%
+Elapsed time = 0.01 sec. (0.52 ticks, tree = 0.00 MB, solutions = 3)
+
+Zero-half cuts applied:  2
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (0.52 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (0.52 ticks)
+
+Solution status = Optimal
+
+Total Cost 25.0
+The variables x_{ij} 
+---->x[1][2] 1.0
+---->x[1][3] 1.0
+---->x[2][1] 1.0
+---->x[2][4] 1.0
+---->x[3][2] 1.0
+---->x[3][4] 1.0
+---->x[4][1] 1.0
+---->x[4][3] 1.0

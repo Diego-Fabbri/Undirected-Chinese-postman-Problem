@@ -9,7 +9,7 @@ public class Data {
     //Given a connected undirected graph G=(V,E)
     // V={1, 2, 3, 4},
     //E={(1,2), (1,3), (1,4), (2,3), (2,4), (3,4)}.
-    //cij={c12=1, c13=5, c14=4, c23=2, c24=6, c34=3} 
+    //cij={c12=1, c13=5, c14=4, c23=2, c24=6, c34=3} and c_ij = c_ji
     public static double[][] costs(){
     double[][] costs ={
         {Double.MAX_VALUE,1,5,4},

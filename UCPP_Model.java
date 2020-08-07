@@ -48,7 +48,7 @@ public class UCPP_Model {
             for (int j = 0; j < size; j++) {
                 if(i!= j){
                  expr_1.addTerm(x_d[i][j], 1);// x_ij
-                 expr_1.addTerm(x_d[j][i], -1);// x_ij
+                 expr_1.addTerm(x_d[j][i], -1);// -x_ji
                  
                 }
                 

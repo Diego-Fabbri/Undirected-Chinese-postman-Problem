@@ -1,0 +1,105 @@
+
+\documentclass[a4paper,12pt,titlepage]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{tikz,pgf}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage[english]{babel}
+
+
+%Url e Bookmarks of output PDF 
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	%	pdftitle={Document title},
+	bookmarks=true,
+	%pdfpagemode=FullScreen,
+}
+
+
+
+
+\usepackage{rotating}
+
+\usepackage{tabularx}
+\usepackage{multirow} 
+\usepackage{lscape}
+\usepackage{tikz}
+%to insert PDF files
+\usepackage[final]{pdfpages}
+%--Packages--
+
+\usepackage{eurosym}
+\usepackage{graphicx} \usepackage{verbatim}
+\usepackage{graphics}
+\usepackage{tikz,pgf}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx,color,listings}
+\frenchspacing 
+\usepackage{geometry}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{listings}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+
+
+\begin{document}
+	\section*{Undirected Chinese postman Problem}
+	
+	The CPP is defined on an undirected graph $G=(V,E)$, where $V=\left\lbrace 1,…, n\right\rbrace $ is the set of vertices, $E =\left\lbrace (i,j)
+	: i, j\in V, i<j, i\neq j\right\rbrace $ is the set of undirected edges. The traversal cost $c_{ij}$ of an edge $(i,j)$ in $E$ is supposed to be non-negative and is also called cost or distance of $(i,j)$ .\\ 
+	In case of an edge $(i,j)$ in $E$, it is usually assumed that $c_{ij} = c_ {ji}$. \\
+	It is generally assumed that $G$ is strongly connected that always possible to reach any vertex from any other vertex.
+	\subsection*{Sets}
+	- $V$ set including all nodes in the network;\\
+	- $E$ set including all edges in the network;\\
+	- $G=(V,E)$ a connected undirected graph;
+	\subsection*{Parameters}
+	- $n$ total number of nodes in network;\\
+	- $c_{ij}$ distance from $i \in V$ to $j \in V$;
+	\subsection*{Variables}
+	- $x_{ij}$ decision variable which represents the number of times arc $(i,j)$ is traversed in each cycle using vehicle starting from node $i\in V$ ending at node $j\in V$.
+	\begin{equation}
+	min \sum_{(i,j)\in E}c_{ij} \cdot x_{ij}
+	\end{equation}
+	
+	\begin{equation}
+	\sum_{j=1}^{n} x_{ij} - \sum_{j=1}^{n} x_{ji} = 0 \quad \forall i\in V
+	\end{equation}
+	
+	\begin{equation}
+	x_{ij} + x_{ji} \geq 1 \quad \forall (i,j)\in E
+	\end{equation}
+	
+	\begin{equation}
+	x_{ij}\geq0 \quad \text{and integer} \quad \forall (i,j)\in E
+	\end{equation}
+	\newpage
+	The objective function (1) minimizes the total length of route R that is covered by track inspection vehicle. \\
+	Eq. (2) is flow conservation at each node constraint which guarantees the creation of a tour of the network for the vehicle. \\
+	Eq. (3) ensures that each arc that exists is covered at least once during each cycle regardless of its direction using the vehicle. \\
+	Eq. (4) is restriction on the variables.\\
+	\\
+	
+	
+\end{document}
